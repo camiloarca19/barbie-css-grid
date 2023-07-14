@@ -138,6 +138,6 @@ body{
     }
     .margot img{
         width: 120%;
-        grid-column: 4/13;
+        grid-column: 4/12;
     }
 }
