@@ -122,7 +122,11 @@ body{
 }
 @media (max-width:768px){
     .margot img{
-        width: 90%;
+        width: 120%;
+    }
+    .margot{
+        align-items: ends;
+        
     }
 }
 @media (max-width:320px){
@@ -139,5 +143,8 @@ body{
     .margot img{
         width: 120%;
         grid-column: 4/12;
+    }
+    .margot{
+        align-items: center;
     }
 }
