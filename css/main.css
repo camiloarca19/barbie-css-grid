@@ -1,0 +1,143 @@
+:root{
+    --pink:#FB1FB1;
+    --soft-pink: #F494D2;
+    --secondary-pink: #EF53B9;
+    --violet: #CB73EE;
+    --secondary-violet: #DA84F1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow: hidden;
+}
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(251,31,177);
+    background: linear-gradient(146deg, rgba(251,31,177,1) 0%, rgba(12,6,10,1) 100%);
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(9,1fr);
+    position: relative;
+
+}
+.cuadrado2{
+    background-color: var(--pink);
+    grid-row: 7/9;
+    grid-column: 4/10;
+    opacity: 70%;
+    z-index: 1;
+}
+.cuadrado{
+    background-color: var(--violet);
+    grid-row: 2/10;
+    grid-column: 4/6;
+    min-width: 100px;
+    z-index: 2;
+}
+.circle-container{
+    display:grid;
+    grid-row: 3/7;
+    grid-column: 2/7;
+    border-radius: 50%;
+    place-content: center;
+}
+.circle{
+    width: 200px;
+    border-radius: 50%;
+    background-color: var(--soft-pink);
+    height: 200px;
+    opacity: 50%;
+    z-index: 4;
+}
+.bomb-container{
+    display:grid;
+    grid-row: 5/9;
+    grid-column: 5/9;
+    border-radius: 50%;
+    place-content: center;
+    z-index: 3;
+}
+.bomb{
+    width: 300px;
+    background-image: url('../assets/bomb.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    opacity: 50%;
+    z-index: 3;
+}
+.margot{
+    display: grid;
+    grid-column: 4/9;
+    grid-row: 4/-1;
+    /* background-image: url('../assets/margot.png'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 4;
+    position: relative;
+    justify-items: start;
+    align-items: end;
+    
+}
+.margot img{
+    width: 50%;
+}
+.vehicle {
+    width: 120%;
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: end;
+    position:absolute;
+    bottom: 0;
+    z-index: 9; 
+    bottom: -60px;
+    display: grid;
+    place-content: end;
+}
+.scuare{
+    grid-row: 4/-1;
+    grid-column: 4/9;
+    border: 4px solid white;
+}
+.text{
+    grid-row: 3/4;
+    grid-column: 7/9;
+    vertical-align: end;
+}
+.text p{
+    color: white;
+    font-family: 'Yellowtail', cursive;
+    font-size: 5rem;
+    vertical-align: end;
+}
+@media (max-width:768px){
+    .margot img{
+        width: 90%;
+    }
+}
+@media (max-width:320px){
+    .text p{
+        font-size: 3rem;
+    }
+    .circle-container{
+        grid-row: 4/8;
+    }
+    .circle{
+        width: 150px;
+        height: 150px;
+    }
+    .margot img{
+        width: 120%;
+        grid-column: 4/13;
+    }
+}
